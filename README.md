@@ -19,17 +19,14 @@ Le projet est construit en utilisant les principes de base de Go, y compris la g
 
 1. Clonez ce dépôt de code :
 
-   ```shell
    git clone https://github.com/freehzaix/crud_golang.git
 
 Accédez au répertoire du projet :
-shell
 
-cd crud-golang
+    cd crud-golang
 
 2.Exécutez l'application Go :
 
-    ```shell
     go run main.go
 
 L'application sera accessible à l'adresse http://localhost:8080 dans votre navigateur.
