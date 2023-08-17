@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD in Golang</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="card">
+            <h1 class="card-title text-center">CRUD in Golang</h1>
+        </div>
+        <a href="/AddUser" class="btn btn-primary mt-3">Ajouter un utilisateur</a>
+    
+        <div class="row mt-4">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Téléphone</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    {{ range $index, $user := . }}
+                    <tr>
+                        <td><script>document.write({{ $index }} + 1)</script></td>
+                        <td>{{ $user.Nom }}</td>
+                        <td>{{ $user.Prenom }}</td>
+                        <td>{{ $user.Telephone }}</td>
+                        <td>{{ $user.Email }}</td>
+                        <td>
+                            <a href="/ShowUser/?id={{ .Id }}" class="btn btn-primary">Update</a>
+                            <a href="/ShowDeleteUser/?id={{ .Id }}" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                    {{ end }}
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

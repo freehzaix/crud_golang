@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un utilisateur - CRUD in Golang</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="container">
+        {{ range . }}
+        <div class="card">
+            <h1 class="card-title text-center">Modifier l'utilisateur n°{{ .Id }} - CRUD in Golang</h1>
+        </div>
+    
+        <div class="row mt-4">
+            <div class="col-6">
+                <form action="/UpdateUserPost" method="POST">
+                    <input type="text" value="{{ .Id }}" name="id" style="display: none;">
+
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom</label>
+                        <input type="text" value="{{ .Nom }}" class="form-control" name="nom" id="nom" aria-describedby="nomh">
+                        <div id="nomh" class="form-text">Vous devez saisir correctement votre nom.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="prenom" class="form-label">Prénom</label>
+                        <input type="text" value="{{ .Prenom }}" class="form-control" name="prenom" id="prenom" aria-describedby="prenomh">
+                        <div id="prenomh" class="form-text">Vous devez saisir correctement votre prénom.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telephone" class="form-label">Téléphone</label>
+                        <input type="text" value="{{ .Telephone }}" class="form-control" name="telephone" id="telephone" aria-describedby="telephoneh">
+                        <div id="telephoneh" class="form-text">Vous devez saisir correctement votre numéro de téléphone.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" value="{{ .Email }}" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Vous devez saisir correctement votre adresse mail.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Modifier l'utilisateur</button>
+                    
+                </form>
+            </div>
+            <div class="col-6">
+
+            </div>
+            
+        </div>
+
+        {{ end}}
+       
+        <a href="/" class="btn btn-info mt-3">Revenir à la page d'accueil</a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
