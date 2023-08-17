@@ -23,7 +23,7 @@ Le projet est construit en utilisant les principes de base de Go, y compris la g
 
 Accédez au répertoire du projet :
 
-    cd crud-golang
+    cd crud_golang
 
 2.Exécutez l'application Go :
 
