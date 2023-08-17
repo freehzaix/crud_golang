@@ -31,9 +31,10 @@ Accédez au répertoire du projet :
 
 L'application sera accessible à l'adresse http://localhost:8080 dans votre navigateur.
 
-Configuration de la base de données
+## Configuration de la base de données
 
-Le projet utilise une base de données MySQL pour stocker les informations des utilisateurs. Assurez-vous d'avoir une instance MySQL en cours d'exécution et configurez les informations de connexion dans le fichier config.go.
-Auteur
+Le projet utilise une base de données MySQL pour stocker les informations des utilisateurs. Assurez-vous d'avoir une instance MySQL en cours d'exécution et configurez les informations de connexion dans le fichier databases/db.go.
+
+### Auteur
 
 Jean-Luc DOH - jeanluc@freehzaix.com
