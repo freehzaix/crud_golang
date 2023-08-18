@@ -40,7 +40,7 @@ A la ligne 11, les informations de la connexion à votre base de données:
 - Mot de passe de la base de données : edyrodal
 - Nom de la base de données : db_test_go
 
-NB: Remplacer simplement mes idenfiants pour vos identifiant.
+NB: Remplacer simplement mes idenfiants par vos identifiant.
 
     var dns string = "jeanluc:edyrodal@(127.0.0.1:3306)/db_test_go?parseTime=true"
 
