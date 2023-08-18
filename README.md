@@ -19,7 +19,7 @@ Le projet est construit en utilisant les principes de base de Go, y compris la g
 
 1. Clonez ce dépôt de code :
 
-   git clone https://github.com/freehzaix/crud_golang.git
+    git clone https://github.com/freehzaix/crud_golang.git
 
 Accédez au répertoire du projet :
 
