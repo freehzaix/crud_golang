@@ -8,10 +8,11 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
+var dns string = "jeanluc:edyrodal@(127.0.0.1:3306)/db_test_go?parseTime=true"
 
 func db() *sql.DB {
 	// Configure the database connection (always check errors)
-	myDb, err := sql.Open("mysql", "jeanluc:edyrodal@(127.0.0.1:3306)/db_test_go?parseTime=true")
+	myDb, err := sql.Open("mysql", dns)
 
 	if err != nil {
 		fmt.Println("Error opening database:", err)

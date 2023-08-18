@@ -35,6 +35,15 @@ L'application sera accessible à l'adresse http://localhost:8080 dans votre navi
 
 Le projet utilise une base de données MySQL pour stocker les informations des utilisateurs. Assurez-vous d'avoir une instance MySQL en cours d'exécution et configurez les informations de connexion dans le fichier databases/db.go.
 
+A la ligne 11, les informations de la connexion à votre base de données:
+- Nom d'utilisateur de la base de données : jeanluc
+- Mot de passe de la base de données : edyrodal
+- Nom de la base de données : db_test_go
+
+NB: Remplacer simplement mes idenfiants pour vos identifiant.
+
+    var dns string = "jeanluc:edyrodal@(127.0.0.1:3306)/db_test_go?parseTime=true"
+
 ### Auteur
 
 Jean-Luc DOH - jeanluc@freehzaix.com
